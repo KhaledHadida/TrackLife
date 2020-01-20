@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <link rel="stylesheet" href="style.css">
+  <body>
+     <style>
+      .container {
+        max-height: 600px;
+        min-height: 200px;
+        width: 210px;
+        border: 2px solid rgba(0,0,0,0.3);
+        border-radius: 2px;
+        background: white;
+      }
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+      .patient-list {
+        max-height: 250px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+
+/* scroll bar */ 
+      ::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+    </style>
+     <div class="container">
+        <div class="page-header">
+          <h3>Track your browsing!</h3>
+          <p id="status">TEST</p>
+        </div>
+
+    <script src="Chart.js"></script>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <div id="js-legend" class="chart-legend"></div>
+
+    <script src="popup.js"></script>
+
+
+
+  </body>
+</html>
